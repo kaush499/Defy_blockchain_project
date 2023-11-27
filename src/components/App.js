@@ -4,7 +4,7 @@ import DaiToken from '../abis/DaiToken.json'
 import DappToken from '../abis/DappToken.json'
 import TokenFarm from '../abis/TokenFarm.json'
 import RealAssetToken from '../abis/RealAssetToken.json'
-import Navbar from './Navbar'
+import NavbarHeader from './NavbarHeader'
 import Main from './Main'
 import './App.css'
 
@@ -166,10 +166,10 @@ class App extends Component {
 
     return (
       <div>
-        <Navbar account={this.state.account} />
+        <NavbarHeader account={this.state.account} />
         <div className="container-fluid mt-5">
           <div className="row">
-            <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '600px' }}>
+            <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '90%' }}>
               <div className="content mr-auto ml-auto">
                 <a
                   href="http://www.dappuniversity.com/bootcamp"

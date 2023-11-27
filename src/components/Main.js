@@ -5,9 +5,53 @@ class Main extends Component {
 
   render() {
     return (
-      <div id="content" className="mt-3">
+      <div id="content" className="mt-2">
+        <div className='d-flex justify-content-between'>
+        <div className='card mb-4' style={{width: "45%"}}>
+          <table className="table table-borderless text-muted text-center">
+            {/* <thead>
+              <tr>
+                <th>Staking Balance</th>
+                <th>Reward Balance</th>
+                <th>Real Asset Staking Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{window.web3.utils.fromWei(this.props.stakingBalance, 'Ether')} mDAI</td>
+                <td>{window.web3.utils.fromWei(this.props.dappTokenBalance, 'Ether')} DAPP</td>
+                <td>{window.web3.utils.fromWei(this.props.realAssetStakingBalance, 'Ether')} DAPP</td>
+              </tr>
+            </tbody> */}
+            <thead>
+              <tr>
+                <th>Type of Balance</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Staking Balance</td>
+                <td>{window.web3.utils.fromWei(this.props.stakingBalance, 'Ether')} mDAI</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>Reward Balance</td>
+                <td>{window.web3.utils.fromWei(this.props.dappTokenBalance, 'Ether')} DAPP</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <td>Real Asset Staking Balance</td>
+                <td>{window.web3.utils.fromWei(this.props.realAssetStakingBalance, 'Ether')} mDAI</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <div className="card mb-4" >
+      <div className='d-flex flex-column' style={{width: "45%"}}>
+        <div className="card mb-4" style={{width: "100%"}}>
 
         <div className="card-body">
 
@@ -18,11 +62,8 @@ class Main extends Component {
               amount = window.web3.utils.toWei(amount, 'Ether')
               this.props.stakeTokens(amount)
             }}>
-            <div>
-              <label className="float-left"><b>Stake Tokens</b></label>
-              <span className="float-right text-muted">
-                Balance: {window.web3.utils.fromWei(this.props.daiTokenBalance, 'Ether')}
-              </span>
+            <div className='d-flex justify-content-center'>
+              <label className="float-center"><h4>Stake Tokens</h4></label>
             </div>
             <div className="input-group mb-4">
               <input
@@ -31,30 +72,30 @@ class Main extends Component {
                 className="form-control form-control-lg"
                 placeholder="0"
                 required />
-              <div className="input-group-append">
-                <div className="input-group-text">
-                  <img src={dai} height='32' alt=""/>
-                  &nbsp;&nbsp;&nbsp; mDAI
-                </div>
-              </div>
             </div>
-            <button type="submit" className="btn btn-danger btn-block btn-lg">STAKE!</button>
-          </form>
-          <button
-            type="submit"
-            className="btn btn-link btn-block btn-sm"
-            onClick={(event) => {
-              event.preventDefault()
-              this.props.unstakeTokens()
-            }}>
-              UN-STAKE...
-            </button>
+            <div className='d-flex justify-content-end'>
+              <p className="float-right text-muted">
+                  <span className='font-weight-bold'>Remaining Balance</span>: {window.web3.utils.fromWei(this.props.daiTokenBalance, 'Ether')}
+              </p>
+            </div>
+            <div className='d-flex justify-content-between'>
+              <button type="submit" style={{width: 'auto', height: "50px"}} className="btn btn-success btn-block">Stake Tokens</button>
+              <button
+                type="button"
+                style={{width: 'auto', height: "50px", marginTop: "0px"}}
+                className="btn btn-danger btn-block"
+                onClick={(event) => {
+                  event.preventDefault()
+                  this.props.unstakeTokens()
+                }}>
+                  Unstake Tokens
+                </button>
+            </div>
+            </form>
         </div>
         </div>
 
-
-        {/* New form for RealAssetToken */}
-        <div className="card mb-4">
+        <div className="card mb-4" style={{width: "100%"}}>
           <div className="card-body">
             <form onSubmit={(event) => {
               event.preventDefault()
@@ -63,12 +104,10 @@ class Main extends Component {
               amount = window.web3.utils.toWei(amount, 'Ether')
               this.props.stakeRealAssetTokens(amount)
             }}>
-              {/* Form fields for RealAssetToken */}
-              {/* // ... [Add form fields and buttons for RealAssetToken] */}
-              <label className="float-left"><b>Stake Tokens</b></label>
-              <span className="float-right text-muted">
-                Balance: {window.web3.utils.fromWei(this.props.realAssetTokenBalance, 'Ether')}
-              </span>
+              <div className='d-flex justify-content-center'>
+                <label className="float-center"><h4>Real World Asset Tokens</h4></label>
+              </div>
+              
               <div className="input-group mb-4">
                 <input
                   type="text"
@@ -76,39 +115,30 @@ class Main extends Component {
                   className="form-control form-control-lg"
                   placeholder="0"
                   required />
-                {/* Add any additional styling or icons needed */}
               </div>
-              <button type="submit" className="btn btn-primary btn-block btn-lg">STAKE REAL ASSETS</button>
+              <div className='d-flex justify-content-end'>
+              <p className="float-right text-muted">
+                  <span className='font-weight-bold'>Remaining Balance</span>: {window.web3.utils.fromWei(this.props.realAssetTokenBalance, 'Ether')}
+              </p>
+            </div>
+              <div className='d-flex justify-content-between'>
+                  <button style={{width: 'auto', height: "50px"}} type="submit" className="btn btn-success btn-block">Stake real assets</button>
+                
+                <button
+                  className="btn btn-danger btn-block"
+                  style={{width: 'auto', height: "50px", marginTop: "0px"}}
+                  onClick={(event) => {
+                    event.preventDefault()
+                    this.props.unstakeRealAssetTokens()
+                  }}>
+                  Unstake real assets
+                </button>
+            </div>
             </form>
-            <button
-              className="btn btn-link btn-block btn-sm"
-              onClick={(event) => {
-                event.preventDefault()
-                this.props.unstakeRealAssetTokens()
-              }}>
-              UN-STAKE REAL ASSETS
-            </button>
           </div>
         </div>
-
-        {/* Optional: Additional UI elements to display RealAssetToken balance and other info */}
-        <table className="table table-borderless text-muted text-center">
-          <thead>
-            <tr>
-              <th>Staking Balance</th>
-              <th>Reward Balance</th>
-              <th>Real Asset Staking Balance</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{window.web3.utils.fromWei(this.props.stakingBalance, 'Ether')} mDAI</td>
-              <td>{window.web3.utils.fromWei(this.props.dappTokenBalance, 'Ether')} DAPP</td>
-              <td>{window.web3.utils.fromWei(this.props.realAssetStakingBalance, 'Ether')} DAPP</td>
-            </tr>
-          </tbody>
-        </table>
-
+        </div>
+        </div>
       </div>
     );
   }
