@@ -21,8 +21,6 @@ The Project introduces a groundbreaking application of blockchain, emphasizing i
       sudo npm install -g truffle
   ##
 
-- **Ganache** installation guide can be found in [here](https://www.trufflesuite.com/ganache).
-
 - **MetaMask** installation guide can be found in [here](https://metamask.io/).
 
 ### Commands
@@ -42,7 +40,17 @@ The Project introduces a groundbreaking application of blockchain, emphasizing i
 - Deploy and run the front-end application
 
       npm start run
-      
+
+- Add local network to Metamask
+
+Follow the below image, to add new network.
+
+<img width="922" alt="Screen Shot 2023-11-26 at 10 47 55 PM" src="https://github.com/kaush499/Defy_blockchain_project/assets/35135441/641b50a9-4864-4353-b56a-308af77823f8">
+
+Shift to Localhost network.
+
+<img width="957" alt="Screen Shot 2023-11-26 at 10 48 07 PM" src="https://github.com/kaush499/Defy_blockchain_project/assets/35135441/524ecc5b-6001-457d-ac2b-f750db322a92">
+
 - Run the scripts to issue tokens
 
       truffle exec scripts/issue-tokens.js
