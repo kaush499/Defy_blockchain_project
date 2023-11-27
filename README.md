@@ -1,6 +1,6 @@
 ## Description
 
-    The Project introduces a groundbreaking application of blockchain, emphasizing its evolution beyond cryptocurrencies. The project innovatively addresses insecure voting systems using decentralized finance (DeFi) and Solidity contracts on Ethereum, aiming to enhance security and transparency. Overall, it signals a shift toward a decentralized paradigm to contribute to the evolution of democratic processes and financial systems.
+The Project introduces a groundbreaking application of blockchain, emphasizing its evolution beyond cryptocurrencies. The project innovatively addresses insecure voting systems using decentralized finance (DeFi) and Solidity contracts on Ethereum, aiming to enhance security and transparency. Overall, it signals a shift toward a decentralized paradigm to contribute to the evolution of democratic processes and financial systems.
 
 ## Installation
 
