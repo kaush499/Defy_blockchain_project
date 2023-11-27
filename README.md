@@ -31,6 +31,10 @@ The Project introduces a groundbreaking application of blockchain, emphasizing i
 
       npm install --force
 
+- To run etherium clients locally
+
+      truffle develop
+
 - Deploy smart contracts to the Ethereum blockchain
 
       truffle migrate --reset
