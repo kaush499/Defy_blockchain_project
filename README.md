@@ -17,8 +17,9 @@ The Project introduces a groundbreaking application of blockchain, emphasizing i
 
 
 - **Truffle**
-
-    sudo npm install -g truffle
+  ##
+      sudo npm install -g truffle
+  ##
 
 - **Ganache** installation guide can be found in [here](https://www.trufflesuite.com/ganache).
 
