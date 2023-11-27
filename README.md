@@ -8,10 +8,12 @@ The Project introduces a groundbreaking application of blockchain, emphasizing i
 
 - **Node.js**
 
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash    
-    nvm install v16.14.2
-    nvm current 
-    npm -v
+    ##
+      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+      nvm install v16.14.2
+      nvm current 
+      npm -v
+   ##
 
 
 - **Truffle**
