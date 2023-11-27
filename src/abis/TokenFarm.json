@@ -8834,12 +8834,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x5e7e0b4C317c2f8569C7415694AB6194171d1E35",
-      "transactionHash": "0xf19721bc6fecb65ca18e91d3899e9647ad9c46b20ea2d16d0afbffac2aa23eef"
+      "address": "0xE99dAf3342b5f2E19213df8208d1CDF4f5DCe0Da",
+      "transactionHash": "0xc60147766c8c2513ba4d9084911b881d0c63d2f216650210e81d7ce7e9d7479b"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2023-11-27T02:32:29.049Z",
+  "updatedAt": "2023-11-27T05:11:53.519Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
